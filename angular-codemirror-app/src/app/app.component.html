@@ -1,0 +1,25 @@
+<!-- app.component.html -->
+<h2>CodeMirror Editor</h2>
+<form [formGroup]="code_editor_form" (ngSubmit)="code_form_submit()">
+
+    <div>
+        <p>What is your code about?</p>
+        <input type="text" style="width: 50%;">
+    </div>
+
+    <br>
+
+  <div>
+        <p>Type your code below</p>
+      <ngx-codemirror id='editor'
+        formControlName="code"
+        [options]="codeMirrorOptions">
+    </ngx-codemirror>
+</div>
+
+  <br/>
+
+  <div>
+      <button>Submit</button>
+  </div>
+</form>
